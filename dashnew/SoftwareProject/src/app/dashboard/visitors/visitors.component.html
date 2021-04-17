@@ -1,0 +1,145 @@
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0 text-dark">Clients</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Dashboard v1</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <table class="table table-striped table-sm consulTable" style="padding:20px;">
+        <thead>
+          <tr style="background-color:rgb(198, 235, 187);">
+            <th>No</th>
+            <th>Name</th>
+            <th>Email</th>
+            
+          </tr>
+        </thead>
+
+
+        <tbody>
+            <tr *ngFor="let con of clients">
+                <td>{{con.key}}</td>
+                <td>{{con.name}}</td>
+                <td>{{con.email}}</td>
+                
+            </tr>
+        </tbody>
+
+
+    </table>
+
+
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2">
+            <div class="col-sm-6">
+              <h1 class="m-0 text-dark">Consultants</h1>
+            </div><!-- /.col -->
+  
+          </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+
+
+      <div class="consul-table" >
+        <table  class="table table-striped table-sm" style="padding:20px;">
+          <thead>
+            <tr style="background-color:lightblue;">
+              <th>No</th>
+              <th>Name</th>
+              <th>Valid/Invalid</th>
+              <th>MoreDetails</th>
+              <th>Offline/Online</th>
+            </tr>
+          </thead>
+          
+          <tbody>
+              
+              <tr *ngFor="let con of consultants">
+                
+                  <td><div class="image">
+                    {{con.key}}
+                    <img src="{{con.proPicURL}}" width="40px" class="img-circle elevation-2" alt="User Image">
+                  </div></td>
+                  <td style="padding: 5px;">{{con.firstName}} {{con.secondName}}</td>
+                  
+                    <td>
+                      <div *ngIf="!con.verified">
+                        <button (click)="updatetoValid(con.key)" class="btn btn-sm btn-danger">Invalid</button>
+                      </div>
+  
+                      <div *ngIf="con.verified">
+                        <button (click)="updatetoInvalid(con.key)" class="btn btn-sm btn-success">Valid</button>
+                      </div>
+                      
+                    </td>
+                
+                  
+                  
+                  
+                  <td><button type="button" (click)="moreDetails(con.email,con.firstName,con.field,con.mobileNumber)" data-toggle="modal" data-target="#exampleModalLong" class="btn btn-sm btn-outline-warning">View</button></td>
+  
+                  <td>offline</td>
+              </tr>
+              
+          </tbody>
+      
+      </table>
+      </div>
+
+      <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-primary" id="exampleModalLongTitle">Consultant More Details</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body bg-secondary">
+                <div class="row">
+                  <div class="col-md-3">
+                    <ul style="list-style:none;">
+                      <li>Email</li>
+                      <li>Full name</li>
+                      <li>Category</li>
+                      <li>Mobile no</li>
+                      <li>Rank</li>
+                    </ul>
+                  </div>
+                  <div class="col-md-6">
+                    <ul style="list-style:none;">
+                      <li>{{currentEmail}}</li>
+                      <li>{{currentName}}</li>
+                      <li>{{currentCategory}}</li>
+                      <li>{{currentMobile}}</li>
+                      <li><img src="assets/images/dashboardImages/badge.png" height="20" width="20" class="img-circle elevation-2" alt="User Image"></li>
+                    </ul>
+                  </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-outline-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+</div>
+
+

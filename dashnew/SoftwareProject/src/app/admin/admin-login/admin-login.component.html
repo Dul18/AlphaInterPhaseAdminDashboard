@@ -1,0 +1,42 @@
+<div class="container">
+    <br><br><br>
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <div class="circle"></div>
+                    <header class="myHed text-center">
+                        <p><span class="glyphicon black">&#xe008;</span><b>LOGIN</b>
+                        </p>  
+                    </header>
+                    <form class="main-form text-center">
+                        <div>
+                        <label class="my-0">
+                            <input type="text" class="myInput" name="email" [(ngModel)]="email" placeholder="Email" >
+                        </label> 
+                        </div>
+                        <div>
+                        <label class="my-0">
+                        <p></p> 
+                            <input type="password" class="myInput" name="password" [(ngModel)]="password" placeholder="Password">
+                        </label> 
+                        </div>
+                        <label class="check_1">
+                            <input type="checkbox" checked>Remember Me
+                        </label>
+                        <div>
+                        <label class="my-0">
+                            <input type="submit" (click)="loginAdmin()" class="form-control button" value="LOGIN">
+                        </label> 
+                        <p></p>
+                        </div>
+                           <span class="check_1">Forget password</span>	
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+
+    </div>
+</div>

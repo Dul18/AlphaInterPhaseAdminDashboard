@@ -1,0 +1,72 @@
+body{margin-top:20px;
+    background:#eee;
+    }
+    
+    /* CONTACTS */
+    .contact-box {
+      background-color: #ffffff;
+      border: 1px solid #e7eaec;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .contact-box > a {
+      color: inherit;
+    }
+    .contact-box.center-version {
+      border: 1px solid #e7eaec;
+      padding: 0;
+    }
+    .contact-box.center-version > a {
+      display: block;
+      background-color: #ffffff;
+      padding: 20px;
+      text-align: center;
+    }
+    .contact-box.center-version > a img {
+      width: 80px;
+      height: 80px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .contact-box.center-version address {
+      margin-bottom: 0;
+    }
+    .contact-box .contact-box-footer {
+      text-align: center;
+      background-color: #ffffff;
+      border-top: 1px solid #e7eaec;
+      padding: 15px 20px;
+    }
+    a{
+        text-decoration:none !important;    
+    }
+
+    .row{
+        align-items: stretch;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+      }
+      .card {
+        /*float: left;*/
+        max-width: 33.333%;
+        padding: .75rem;
+        margin-bottom: 2rem;
+        border: 0;
+        flex-basis: 33.333%;
+        flex-grow: 0;
+        flex-shrink: 0;
+        background-color:midnightblue;
+       
+      }
+      
+      .card > img {
+        margin-bottom: .75rem;
+      }
+      
+      .card-text {
+        font-size: 100%;
+        color: whitesmoke;
+      }

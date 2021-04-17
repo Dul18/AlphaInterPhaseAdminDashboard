@@ -1,0 +1,23 @@
+<div class="container">
+    
+    <div class="row">
+        <div class="col-md-4">
+            <h2 class="text-primary">Regsiter Consultant</h2>
+            <input type="text" class="form-control" name="email" [(ngModel)]="email" placeholder="enter email">
+            <input type="text" class="form-control" name="password" [(ngModel)]="password" placeholder="enter password">
+            <input type="submit" value="submit" (click)="register()">
+        </div>
+
+        <div class="col-md-4">
+            <h2 class="text-primary">Login Consultant</h2>
+            <input type="text" class="form-control" name="lemail" [(ngModel)]="lemail" placeholder="enter email">
+            <input type="text" class="form-control" name="lpassword" [(ngModel)]="lpassword" placeholder="enter password">
+            <input type="submit" value="submit" (click)="login()">
+        </div>
+    </div>
+    <p>{{api.currentUserId}}</p>
+
+    <button class="btn btn-success">popup</button>
+
+    
+</div>

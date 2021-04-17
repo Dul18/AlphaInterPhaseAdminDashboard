@@ -1,0 +1,54 @@
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0 text-dark">Add New Admin</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Dashboard v1</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <div class="admin-form">
+      <h2 style="color: whitesmoke;margin-left: 40%;">Enter Admin Details</h2>
+      <table width="100%">
+        <tbody>
+            <tr>
+              <td>Enter Username</td>
+              <td><input type="text" class="form-control" name="username" [(ngModel)]="username"></td>
+              <td></td>
+            </tr>
+            <tr>
+                <td>Enter email</td>
+                <td><input type="text" class="form-control" name="email" [(ngModel)]="email"></td>
+            </tr>
+            
+
+            <tr>
+                <td>Enter password</td>
+                <td><input type="text" class="form-control"name="password" [(ngModel)]="password" ></td>
+            </tr>
+            <tr>
+              <td>Confirm password</td>
+              <td><input type="text" class="form-control"name="password" [(ngModel)]="password" ></td>
+          </tr>
+            <tr>
+                <td></td>
+                <td><button (click)="onSignUp()" style="margin-left: 150px;" class="btn btn-success">Register</button></td>
+            </tr>
+
+        </tbody>
+    </table>
+    </div>
+    
+    
+</div>

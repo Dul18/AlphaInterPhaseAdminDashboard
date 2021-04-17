@@ -1,0 +1,27 @@
+
+<div class="container">
+    <div class="form-group">
+        <input type="text" class="form-control" id="fname" name="fname" [(ngModel)]="consultant.name" placeholder="Enter first name">
+    </div>
+    <!-- <div class="form-group">
+        <input type="text" class="form-control" id="downloadUrl" name="downloadUrl" [(ngModel)]="consultant.downloadUrl" placeholder="Enter last name">
+    </div> -->
+    <div class="form-group">
+        <input type="text" class="form-control" id="category" name="category" [(ngModel)]="category" placeholder="Enter category">
+    </div>
+    <div class="form-group">
+        <input type="file" (change)="showPreview($event)" >
+    </div>
+    <div class="form-group">
+        <input type="submit" (click)="save()" value="Save">
+    </div>
+    <p>{{apiSer.currentUserId}}</p>
+</div>
+
+
+<div class="container">
+    <input type="text" id="cname" name="cname" [(ngModel)]="client.cname" placeholder="enter name">
+    <input type="text" id="cphoneNumber" name="cphoneNumber" [(ngModel)]="client.cphoneNumber" placeholder="enter phone number">
+    
+    <input type="button" (click)="saveClient()" value="Save">
+</div>
